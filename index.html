@@ -1,41 +1,58 @@
-<!-- Home Screen Overlay -->
-<div id="startScreen">
-    <div id="startTitle">3D DEMOLITION DERBY</div>
-    <div id="startSub">2001 GMC Yukon Edition</div>
-    <button id="startButton">START GAME</button>
-</div>
-
-<!-- Countdown Overlay -->
-<div id="countdownScreen" style="display: none;">5</div>
-
-<!-- Full-Screen Result Pop-up Overlay -->
-<div id="resultScreen" style="display: none;">
-    <div id="resultText">VICTORY!</div>
-    <button id="homeButton">HOME SCREEN</button>
-</div>
-
-<div id="gameContainer">
-    <canvas id="webglCanvas"></canvas>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Demolition Derby: 2001 GMC Yukon</title>
    
-    <!-- Mini Yukon Graphical Component Damage HUD -->
-    <div id="hud">
-        <div id="hudTitle">VEHICLE STATUS</div>
-        <div id="carHudGraphic">
-            <div id="hud-fl" class="hud-wheel"></div>
-            <div id="hud-fr" class="hud-wheel"></div>
-            <div id="hud-engine">ENG</div>
-            <div id="hud-body">BODY</div>
-            <div id="hud-rl" class="hud-wheel"></div>
-            <div id="hud-rr" class="hud-wheel"></div>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+   
+    <!-- Load Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <!-- Home Screen Overlay -->
+    <div id="startScreen">
+        <div id="startTitle">3D DEMOLITION DERBY</div>
+        <div id="startSub">2001 GMC Yukon Edition</div>
+        <button id="startButton">START GAME</button>
+    </div>
+
+    <!-- Countdown Overlay -->
+    <div id="countdownScreen" style="display: none;">5</div>
+
+    <!-- Full-Screen Result Pop-up Overlay -->
+    <div id="resultScreen" style="display: none;">
+        <div id="resultText">VICTORY!</div>
+        <button id="homeButton">HOME SCREEN</button>
+    </div>
+
+    <div id="gameContainer">
+        <canvas id="webglCanvas"></canvas>
+       
+        <!-- Mini Yukon Graphical Component Damage HUD -->
+        <div id="hud">
+            <div id="hudTitle">VEHICLE STATUS</div>
+            <div id="carHudGraphic">
+                <div id="hud-fl" class="hud-wheel"></div>
+                <div id="hud-fr" class="hud-wheel"></div>
+                <div id="hud-engine">ENG</div>
+                <div id="hud-body">BODY</div>
+                <div id="hud-rl" class="hud-wheel"></div>
+                <div id="hud-rr" class="hud-wheel"></div>
+            </div>
         </div>
     </div>
-</div>
 
-<div id="wheelContainer">
-    <div id="wheelKnob"></div>
-</div>
+    <div id="wheelContainer">
+        <div id="wheelKnob"></div>
+    </div>
 
-<div id="ui">Destroy the AI opponent before it wrecks you!</div>
+    <div id="ui">Destroy the AI opponent before it wrecks you!</div>
 
-<!-- Load Three.js Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Link to your JavaScript file (game.js) -->
+    <script src="game.js"></script>
+</body>
+</html>
