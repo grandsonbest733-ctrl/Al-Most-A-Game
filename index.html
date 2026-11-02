@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Demolition Derby: 2001 GMC Yukon</title>
+    <title>3D Demolition Derby: Multi-Vehicle Edition</title>
    
-    <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
-   
-    <!-- Load Three.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
-    <!-- Home Screen Overlay -->
+    <!-- Home Screen Overlay with Vehicle Selector -->
     <div id="startScreen">
         <div id="startTitle">3D DEMOLITION DERBY</div>
-        <div id="startSub">2001 GMC Yukon Edition</div>
+        <div id="startSub">Multi-Vehicle Edition</div>
+       
+        <div id="selectorContainer">
+            <label style="font-size: 11px; color: #aaa; margin-bottom: 5px;">SELECT YOUR VEHICLE:</label>
+            <select id="vehicleSelect">
+                <option value="yukon">2001 GMC Yukon (Balanced SUV)</option>
+                <option value="camry">2013 Toyota Camry (Fast & Agile Sedan)</option>
+                <option value="ram">2012 Dodge Ram (Heavy Tank Truck)</option>
+            </select>
+        </div>
+
         <button id="startButton">START GAME</button>
     </div>
 
@@ -32,7 +39,12 @@
     <div id="gameContainer">
         <canvas id="webglCanvas"></canvas>
        
-        <!-- Mini Yukon Graphical Component Damage HUD -->
+        <!-- Live Matchup Indicator at Top -->
+        <div id="matchupHud">
+            <span id="playerMatchupText" style="color: #3498db;">YOU: Yukon</span> vs <span id="aiMatchupText" style="color: #e74c3c;">AI: Camry</span>
+        </div>
+
+        <!-- Graphical Component Damage HUD -->
         <div id="hud">
             <div id="hudTitle">VEHICLE STATUS</div>
             <div id="carHudGraphic">
@@ -52,7 +64,6 @@
 
     <div id="ui">Destroy the AI opponent before it wrecks you!</div>
 
-    <!-- Link to your JavaScript file (game.js) -->
     <script src="game.js"></script>
 </body>
 </html>
