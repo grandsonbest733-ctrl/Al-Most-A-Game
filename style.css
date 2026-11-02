@@ -12,7 +12,6 @@ body {
     overflow: hidden;
     touch-action: none;
 }
-/* Home Screen Overlay Styles */
 #startScreen {
     position: absolute;
     top: 0;
@@ -36,7 +35,27 @@ body {
 #startSub {
     font-size: 13px;
     color: #888;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+}
+#selectorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#vehicleSelect {
+    background: #222;
+    color: #fff;
+    border: 2px solid #555;
+    padding: 8px 12px;
+    font-family: monospace;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+}
+#vehicleSelect:hover {
+    border-color: #e74c3c;
 }
 #startButton {
     background: #e74c3c;
@@ -55,7 +74,6 @@ body {
     background: #c0392b;
 }
 
-/* Full-Screen Result Pop-up Overlay */
 #resultScreen {
     position: absolute;
     top: 0;
@@ -95,7 +113,6 @@ body {
     background: #2980b9;
 }
 
-/* Countdown Overlay */
 #countdownScreen {
     position: absolute;
     top: 35%;
@@ -123,7 +140,23 @@ body {
     border: 4px solid #444;
     background: #000;
 }
-/* Graphical Yukon Damage HUD */
+
+/* Live Matchup Banner at Top of Game Canvas */
+#matchupHud {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    pointer-events: none;
+    z-index: 2;
+}
+
 #hud {
     position: absolute;
     top: 10px;
@@ -136,6 +169,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
 }
 #hudTitle {
     font-size: 10px;
